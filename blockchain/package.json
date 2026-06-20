@@ -1,0 +1,20 @@
+{
+  "name": "ghostnet-blockchain",
+  "version": "1.0.0",
+  "description": "GhostNet AI Smart Contract project",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "node": "npx hardhat node",
+    "deploy:local": "npx hardhat run scripts/deploy.js --network localhost",
+    "deploy:monad": "npx hardhat run scripts/deploy.js --network monadTestnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}

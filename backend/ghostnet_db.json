@@ -1,0 +1,126 @@
+{
+  "emergencies": [
+    {
+      "id": "f09b90c9-6cfe-4ff6-8f08-fed88aa6f321",
+      "text": "I have small food problem",
+      "sender": "A",
+      "timestamp": 1781935406425,
+      "status": "ALLOCATED",
+      "meshPath": [
+        "A"
+      ],
+      "category": "FOOD",
+      "priority": "LOW",
+      "resourceNeeded": "FOOD_PACKETS"
+    },
+    {
+      "id": "83300ecd-ca17-4442-8302-8b2195f317fb",
+      "text": "Person bleeding badly",
+      "sender": "B",
+      "timestamp": 1781935406671,
+      "status": "ALLOCATED",
+      "meshPath": [
+        "A",
+        "B"
+      ],
+      "category": "MEDICAL",
+      "priority": "CRITICAL",
+      "resourceNeeded": "AMBULANCE"
+    },
+    {
+      "id": "d210ce9c-ac06-4f66-8aa8-91ff662700bd",
+      "text": "Medical request for immediate aid",
+      "sender": "C",
+      "timestamp": 1781935406969,
+      "status": "ALLOCATED",
+      "meshPath": [
+        "C"
+      ],
+      "category": "MEDICAL",
+      "priority": "HIGH",
+      "resourceNeeded": "AMBULANCE"
+    },
+    {
+      "id": "6ca370b5-18a2-4fca-b483-ced0dc788e4f",
+      "text": "Safety emergency",
+      "sender": "A",
+      "timestamp": 1781935407253,
+      "status": "ALLOCATED",
+      "meshPath": [
+        "A",
+        "B",
+        "C",
+        "Gateway"
+      ],
+      "category": "MEDICAL",
+      "priority": "HIGH",
+      "resourceNeeded": "AMBULANCE"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "f09b90c9-6cfe-4ff6-8f08-fed88aa6f321",
+      "messageHash": "0x6cbdfafaa2491c4d349a37364395a001b04123bb1cf68e97520078f67399617e",
+      "action": "Dispatched FOOD_PACKETS #1",
+      "resource": "FOOD_PACKETS #1",
+      "priority": "LOW",
+      "timestamp": 1781935405,
+      "txHash": "0x8bce1d9a439a8bdb3c407461a32a5ac782d13894db2d31d0d2600e80f8ea3076",
+      "isVerified": true,
+      "economics": {
+        "utilityScore": 15,
+        "scarcityCost": 5,
+        "decision": "APPROVED",
+        "originalResource": "FOOD_PACKETS"
+      }
+    },
+    {
+      "id": "83300ecd-ca17-4442-8302-8b2195f317fb",
+      "messageHash": "0x171452e91f674fd172c901dad266891aeac806e810bf5f610f40e32ec7fef5f6",
+      "action": "Dispatched AMBULANCE #1",
+      "resource": "AMBULANCE #1",
+      "priority": "CRITICAL",
+      "timestamp": 1781935406,
+      "txHash": "0xmockmwlyk8ufy4",
+      "isVerified": true,
+      "economics": {
+        "utilityScore": 100,
+        "scarcityCost": 80,
+        "decision": "APPROVED",
+        "originalResource": "AMBULANCE"
+      }
+    },
+    {
+      "id": "d210ce9c-ac06-4f66-8aa8-91ff662700bd",
+      "messageHash": "0x53bb945e7ec0ece0633ea098f12a29b53133826a98195d370fd5b1d0df47aa3b",
+      "action": "Dispatched MOCK_ITEM #99",
+      "resource": "MOCK_ITEM",
+      "priority": "HIGH",
+      "timestamp": 1781935406,
+      "txHash": "0xf707174c1ee5f7d69473014c8c2b27cdf10a967e07cd286db8bbe062cddbdd62",
+      "isVerified": false,
+      "economics": {
+        "utilityScore": 75,
+        "scarcityCost": 160,
+        "decision": "CONSERVED_AND_SUBSTITUTED",
+        "originalResource": "AMBULANCE"
+      }
+    },
+    {
+      "id": "6ca370b5-18a2-4fca-b483-ced0dc788e4f",
+      "messageHash": "0x0d1ae4fdf04f3e44951a290ea63536fd3021ca23303d9b2074939c225ce38f16",
+      "action": "Downgraded: Dispatched MEDICAL_KIT #2",
+      "resource": "MEDICAL_KIT #2",
+      "priority": "HIGH",
+      "timestamp": 1781935407,
+      "txHash": "0x21c30594eeff79474e7b80f1ee5855cb46ffb81cbb533da4774adde4580edbc5",
+      "isVerified": true,
+      "economics": {
+        "utilityScore": 75,
+        "scarcityCost": 160,
+        "decision": "CONSERVED_AND_SUBSTITUTED",
+        "originalResource": "AMBULANCE"
+      }
+    }
+  ]
+}
